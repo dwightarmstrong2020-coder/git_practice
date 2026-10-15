@@ -1,0 +1,14 @@
+*:root {
+    --hello: #808080;
+    --font: monospace;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--hello);
+}
+
+*:disabled {
+    color: gray;
+    background-color: gray;
+}
