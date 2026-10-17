@@ -1,2 +1,6 @@
 #Auto-Generated files
 *.html
+#But not our entry file
+!index.html
+#Git closing file
+close.sh
