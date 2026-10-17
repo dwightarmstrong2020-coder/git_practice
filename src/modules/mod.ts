@@ -55,12 +55,18 @@ export interface CanvasItem extends Node {
 export abstract class Node2D extends Node implements CanvasItem {
     canvas: CanvasRenderingContext2D
 
-    constructor(canvas: CanvasRenderingContext2D, public x: number, public y: number, s: Scene, r: string) {
+    constructor(canvas: CanvasRenderingContext2D, s: Scene, public x?: number, public y?: number, r: string = "") {
         super(s, r);
         this.canvas = canvas;
     }
 
     abstract draw(): void
+}
+
+export class Canvas2D extends Node2D {
+    draw(): void {
+        throw new Error("Method not implemented.");
+    }
 }
 
 export class HTMLNode extends Node {
